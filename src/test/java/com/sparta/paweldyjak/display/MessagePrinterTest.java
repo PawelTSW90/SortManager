@@ -21,7 +21,7 @@ public class MessagePrinterTest {
     @Test
     @DisplayName("Generate Sorters to use Test")
     void generateSortersToUseTest() {
-        Assertions.assertEquals("1. BinarySorter\n2. BubbleSorter",messagePrinter.generateSortersToUse());
+        Assertions.assertEquals("1. BinarySorter\n2. BubbleSorter",messagePrinter.generateSortersToUseMessage());
 
 
     }

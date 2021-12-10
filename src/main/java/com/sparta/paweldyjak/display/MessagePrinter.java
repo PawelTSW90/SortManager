@@ -11,7 +11,11 @@ public class MessagePrinter {
         return "Enter the number of the sorter you wish to use:";
     }
 
-    public String generateSortersToUse(){
+    public String generateSortersToUseMessage(){
         return "1. BinarySorter\n2. BubbleSorter";
+    }
+
+    public String generateSizeOfArrayMessage(){
+        return "Please enter the size of array you wish to generate:";
     }
 }

@@ -7,9 +7,9 @@ public class LoadSortManager {
 
     public static void startSortManager(){
         MessagePrinter messagePrinter = new MessagePrinter();
-        messagePrinter.printMessage(messagePrinter.generateStartMessage());
-        messagePrinter.printMessage(messagePrinter.generateSortersToUse());
         UserInputScanner userInputScanner = new UserInputScanner();
-        userInputScanner.startSorterChooseScanner();
+        messagePrinter.printMessage(messagePrinter.generateStartMessage());
+        messagePrinter.printMessage(messagePrinter.generateSortersToUseMessage());
+        userInputScanner.getUserInput(messagePrinter);
     }
 }
