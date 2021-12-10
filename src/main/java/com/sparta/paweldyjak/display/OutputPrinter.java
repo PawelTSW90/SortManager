@@ -1,6 +1,6 @@
 package com.sparta.paweldyjak.display;
 
-public class MessagePrinter {
+public class OutputPrinter {
 
     public void printMessage(String messageToPrint){
         System.out.println(messageToPrint);
@@ -18,4 +18,6 @@ public class MessagePrinter {
     public String generateSizeOfArrayMessage(){
         return "Please enter the size of array you wish to generate:";
     }
+
+
 }

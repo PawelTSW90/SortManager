@@ -1,15 +1,15 @@
 package com.sparta.paweldyjak.start;
 
-import com.sparta.paweldyjak.display.MessagePrinter;
+import com.sparta.paweldyjak.display.OutputPrinter;
 import com.sparta.paweldyjak.display.UserInputScanner;
 
 public class LoadSortManager {
 
     public static void startSortManager(){
-        MessagePrinter messagePrinter = new MessagePrinter();
+        OutputPrinter outputPrinter = new OutputPrinter();
         UserInputScanner userInputScanner = new UserInputScanner();
-        messagePrinter.printMessage(messagePrinter.generateStartMessage());
-        messagePrinter.printMessage(messagePrinter.generateSortersToUseMessage());
-        userInputScanner.getUserInput(messagePrinter);
+        outputPrinter.printMessage(outputPrinter.generateStartMessage());
+        outputPrinter.printMessage(outputPrinter.generateSortersToUseMessage());
+        userInputScanner.getUserInput(outputPrinter);
     }
 }
