@@ -1,5 +1,4 @@
 package com.sparta.paweldyjak.sorters;
-import java.util.Arrays;
 
 public class BubbleSorter {
     private Long sortingTime;
