@@ -12,7 +12,7 @@ public class OutputPrinter {
     }
 
     public String generateSortersToUseMessage(){
-        return "1. BinarySorter\n2. BubbleSorter";
+        return "1. Insertion Sorter\n2. Bubble Sorter";
     }
 
     public String generateSizeOfArrayMessage(){

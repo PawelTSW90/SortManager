@@ -1,4 +1,4 @@
-package com.sparta.paweldyjak.start;
+package com.sparta.paweldyjak;
 
 import com.sparta.paweldyjak.display.OutputPrinter;
 import com.sparta.paweldyjak.display.UserInputScanner;

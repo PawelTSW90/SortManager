@@ -1,4 +1,4 @@
-package com.sparta.paweldyjak.start;
+package com.sparta.paweldyjak;
 
 
 public class App {
