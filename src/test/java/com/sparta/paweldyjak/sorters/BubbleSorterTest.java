@@ -1,9 +1,9 @@
-package com.sparta.paweldyjak.display.sorters;
+package com.sparta.paweldyjak.sorters;
 
-import com.sparta.paweldyjak.sorters.BubbleSorter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -23,6 +23,13 @@ public class BubbleSorterTest {
     @MethodSource("arraysPrinter")
     void bubbleSorterTest(int[] unsortedArray, int[] sortedArray) {
         Assertions.assertArrayEquals(sortedArray, bubbleSorter.sort(unsortedArray));
+
+    }
+
+    @Test
+    @DisplayName("Bubble Sorter Performance Test")
+    void bubbleSorterPerformanceTest() {
+
 
     }
 

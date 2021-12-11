@@ -2,7 +2,6 @@ package com.sparta.paweldyjak;
 
 import com.sparta.paweldyjak.display.OutputPrinter;
 import com.sparta.paweldyjak.display.UserInputScanner;
-import com.sparta.paweldyjak.sorters.ArrayGenerator;
 import com.sparta.paweldyjak.sorters.Sorters;
 import com.sparta.paweldyjak.sorters.SortersFactory;
 
