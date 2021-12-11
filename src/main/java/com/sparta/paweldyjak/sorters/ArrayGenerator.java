@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class ArrayGenerator {
 
-    public int[] generateArray(int arraySize) {
+    public static int[] generateArray(int arraySize) {
         Random random = new Random();
         List<Integer> arraysList = new ArrayList<>();
         //add random number to arraysList, as long as it's size is less than arraySize

@@ -22,8 +22,7 @@ public class BubbleSorterTest {
     @DisplayName("Bubble Sorter Test")
     @MethodSource("arraysPrinter")
     void bubbleSorterTest(int[] unsortedArray, int[] sortedArray) {
-        Assertions.assertArrayEquals(sortedArray, bubbleSorter.bubbleSortNumber(unsortedArray));
-
+        Assertions.assertArrayEquals(sortedArray, bubbleSorter.sort(unsortedArray));
 
     }
 
@@ -33,7 +32,6 @@ return Stream.of(
         Arguments.arguments(new int[]{8,9,1,5,4}, new int[] {1,4,5,8,9}),
         Arguments.arguments(new int[]{10,9,8,7,6}, new int[] {6,7,8,9,10}),
         Arguments.arguments(new int[]{100,34,29,34,500}, new int[] {29,34,34,100,500})
-
 
 );
     }
