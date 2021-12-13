@@ -10,7 +10,7 @@ public class MergeSorter implements Sorters {
 
     public static void main(String[] args) {
         MergeSorter mergeSorter = new MergeSorter();
-        System.out.println(Arrays.toString(mergeSorter.sort(new int[]{1})));
+        System.out.println(Arrays.toString(mergeSorter.sort(new int[]{45,567,2,3,657,3,2334,76,345,2,43,1,546,8,345,13,32,6,678,45,23,12,56,8,723})));
 
 
     }
