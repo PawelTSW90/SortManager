@@ -1,10 +1,9 @@
 package com.sparta.paweldyjak;
-
+import com.sparta.paweldyjak.Logger.MyLogger;
 import com.sparta.paweldyjak.display.OutputPrinter;
 import com.sparta.paweldyjak.display.UserInputScanner;
 import com.sparta.paweldyjak.sorters.Sorters;
 import com.sparta.paweldyjak.sorters.SortersFactory;
-
 import java.util.Arrays;
 
 public class SortManagerLoader {
@@ -17,6 +16,7 @@ public class SortManagerLoader {
     }
 
     public static void runSorter(int sorterNumber, int arraySize) {
+        MyLogger.configLogger();
         Sorters sorter = SortersFactory.getSorter(sorterNumber);
         int[] unsortedArray = ArrayGenerator.generateArray(arraySize);
         int[] sortedArray = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));

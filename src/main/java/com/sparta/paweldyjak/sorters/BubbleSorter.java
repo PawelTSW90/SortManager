@@ -1,5 +1,6 @@
 package com.sparta.paweldyjak.sorters;
 
+
 public class BubbleSorter implements Sorters {
     private Long sortingTime;
 
