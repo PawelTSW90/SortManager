@@ -1,6 +1,8 @@
 package com.sparta.paweldyjak.sorters;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class MergeSorter implements Sorters {
@@ -10,40 +12,51 @@ public class MergeSorter implements Sorters {
 
     @Override
     public int[] sort(int[] arrayToSort) {
-        if (arrayToSort.length == 1) {
-            return arrayToSort;
-        }
-        //splitting array into two arrays and passing values
-        int arrayLength = arrayToSort.length;
-        int[] arrayOne = new int[arrayLength / 2];
-        int[] arrayTwo = new int[arrayLength / 2];
 
-        for (int i = 0; i < arrayLength / 2; i++) {
-            arrayOne[i] = arrayToSort[i];
-        }
-        for (int i = arrayLength / 2; i < arrayLength; i++) {
-            arrayTwo[i - arrayLength / 2] = arrayToSort[i];
-        }
 
-        //remove base array from unsortedArrayList
-        if (unsortedArrayList.size() != 0) {
-            unsortedArrayList.remove(currentIndex);
-        }
-        //add split arrays to unsortedArrayList
-        unsortedArrayList.add(arrayOne);
-        unsortedArrayList.add(arrayTwo);
+        return new int[0];
+    }
+    public void splitArray(int[] arrayToSplit) {
+        int arrayMiddle = arrayToSplit.length / 2;
+        int[] firstArray = new int[arrayMiddle];
+        int[] secondArray = new int[arrayToSplit.length - arrayMiddle];
+        for (int i = 0; i <firstArray.length; i++) {
+            firstArray[i] = arrayToSplit[i];
 
-        //use method recursion to split next array in unsortedArrayList until all arrays are split
-        for (int i = 0; i < unsortedArrayList.size(); i++) {
-            if (unsortedArrayList.get(i).length > 1) {
-                currentIndex = i;
-                sort(unsortedArrayList.get(i));
-            }
         }
-        return merge();
+        for (int i = 0; i <secondArray.length; i++) {
+            secondArray[i] = arrayToSplit[arrayMiddle+i];
+        }
+        if(firstArray.length==1){
+            unsortedArrayList.add(firstArray);
+        } else{
+            splitArray(firstArray);
+        }
+        if(secondArray.length==1){
+            unsortedArrayList.add(secondArray);
+        } else{
+            splitArray(secondArray);
+        }
     }
 
-    public int[] merge() {
+    public static void main(String[] args) {
+        MergeSorter mergeSorter = new MergeSorter();
+        mergeSorter.splitArray(new int[]{1,2,3,4,5,6,7,8,9});
+    }
+
+
+
+    @Override
+    public Long getSortingTime() {
+        return null;
+    }
+
+    @Override
+    public String getSorterName() {
+        return "Merge Sorter";
+    }
+}
+/*    public int[] merge() {
         int firstArrayIndex = 0;
         int secondArrayIndex = 0;
         int mergePosition = 0;
@@ -85,21 +98,4 @@ public class MergeSorter implements Sorters {
         }
         return new int[1];
 
-    }
-
-    @Override
-    public Long getSortingTime() {
-        return null;
-    }
-
-    @Override
-    public String getSorterName() {
-        return "Merge Sorter";
-    }
-
-    public static void main(String[] args) {
-        int[] array = {6, 1, 2, 3, 5, 10, 23};
-        MergeSorter mergeSorter = new MergeSorter();
-        mergeSorter.sort(array);
-    }
-}
+    }*/
