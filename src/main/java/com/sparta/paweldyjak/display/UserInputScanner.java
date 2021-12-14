@@ -1,7 +1,6 @@
 package com.sparta.paweldyjak.display;
 
 import com.sparta.paweldyjak.SortManagerLoader;
-
 import java.util.Scanner;
 
 public class UserInputScanner {
@@ -13,7 +12,7 @@ public class UserInputScanner {
         //get array size from user
         OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
         int arraySizeToGenerate = userInputScanner.nextInt();
-        SortManagerLoader.runSorter(sorterNumberToUse, arraySizeToGenerate);
+        SortManagerLoader.sorterConfig(sorterNumberToUse, arraySizeToGenerate);
     }
 
 }

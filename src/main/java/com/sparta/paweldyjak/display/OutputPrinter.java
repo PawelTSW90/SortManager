@@ -8,13 +8,12 @@ public class OutputPrinter {
         System.out.println(messageToPrint);
     }
 
-
     public static String generateStartMessage(){
         return "Enter the number of the sorter you wish to use:";
     }
 
     public static String generateSortersToUseMessage(){
-        return "1. Bubble Sorter\n2. Insertion Sorter";
+        return "1. Bubble Sorter\n2. Insertion Sorter\n3. Binary Tree Sorter";
     }
 
     public static String generateSizeOfArrayMessage(){

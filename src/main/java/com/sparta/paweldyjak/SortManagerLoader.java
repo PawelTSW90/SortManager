@@ -8,26 +8,37 @@ import java.util.Arrays;
 
 public class SortManagerLoader {
 
-    public static void startSortManager() {
+    public static void getUserInput() {
+        //config Logger
+        MyLogger.configLogger();
+
+        //call Output Printer to print start message and set scanner
         OutputPrinter.printMessage(OutputPrinter.generateStartMessage());
         OutputPrinter.printMessage(OutputPrinter.generateSortersToUseMessage());
         UserInputScanner.getUserInput();
 
     }
 
-    public static void runSorter(int sorterNumber, int arraySize) {
-        MyLogger.configLogger();
-        Sorters sorter = SortersFactory.getSorter(sorterNumber);
+    public static void sorterConfig(int sorterNumber, int arraySize) {
+        //generate random array
         int[] unsortedArray = ArrayGenerator.generateArray(arraySize);
+
+        //set sorter chosen by user
+        Sorters sorter = SortersFactory.getSorter(sorterNumber);
+
+        //run sorter and get its return values
         int[] sortedArray = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         Long sortingTime = sorter.getSortingTime();
         String sorterName = sorter.getSorterName();
-        setFinalOutput(sorterName, unsortedArray, sortedArray, sortingTime);
+
+        //call method that shows final output
+        OutputPrinter.printMessage(OutputPrinter.generateFinalMessage(sorterName, unsortedArray, sortedArray, sortingTime));
 
     }
-    public static void setFinalOutput(String sorterName, int[] unsortedArray, int[] sortedArray, Long sortingTime) {
-        OutputPrinter.printMessage(OutputPrinter.generateFinalMessage(sorterName, unsortedArray, sortedArray, sortingTime));
-    }
+
+
+
+
 
 
 }

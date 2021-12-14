@@ -5,8 +5,10 @@ public class SortersFactory {
     public static Sorters getSorter(int numberOfSorter) {
         if (numberOfSorter == 1) {
             return new BubbleSorter();
-        } else if(numberOfSorter == 2){
+        } else if (numberOfSorter == 2) {
             return new MergeSorter();
+        } else if (numberOfSorter == 3) {
+            return new BinaryTreeSorter();
         }
         return null;
     }

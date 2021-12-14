@@ -5,7 +5,6 @@ import java.util.logging.*;
 
 public class MyLogger {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger("Sorters Logger");
-
     public static void log(Level level, String message){
         logger.log(level, message);
     }
