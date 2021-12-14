@@ -9,6 +9,8 @@ public class SortersFactory {
             return new MergeSorter();
         } else if (numberOfSorter == 3) {
             return new BinaryTreeSorter();
+        } else if(numberOfSorter == 4) {
+            return new InsertionSorter();
         }
         return null;
     }
