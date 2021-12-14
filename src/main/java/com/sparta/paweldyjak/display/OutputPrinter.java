@@ -22,7 +22,7 @@ public class OutputPrinter {
 
     public static String generateFinalMessage(String sorterName, int[] unsortedArray, int[] sortedArray, Long sortingTime){
         return "Sorting using the " + sorterName+"\n"+"Before sorting:\n" + Arrays.toString(unsortedArray)+"\n"+
-                "After sorting:\n" + Arrays.toString(sortedArray) + "\n" + "Time taken: " + sortingTime + " nanoseconds";
+                "After sorting:\n" + Arrays.toString(sortedArray) + "\n" + "Time taken: " + sortingTime + " nano seconds";
 
 
     }
