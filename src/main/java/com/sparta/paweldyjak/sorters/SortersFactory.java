@@ -11,6 +11,8 @@ public class SortersFactory {
             return new BinaryTreeSorter();
         } else if(numberOfSorter == 4) {
             return new InsertionSorter();
+        } else if(numberOfSorter == 5) {
+            return new SelectionSorter();
         }
         return null;
     }

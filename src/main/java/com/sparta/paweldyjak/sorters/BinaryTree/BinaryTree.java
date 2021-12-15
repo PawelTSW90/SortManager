@@ -122,6 +122,7 @@ public class BinaryTree implements BinaryTreeI {
         return rootNode;
     }
 
+    //Node nested class
     public static class Node {
         private final int value;
         private Node leftChild;

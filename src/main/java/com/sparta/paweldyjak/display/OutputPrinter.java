@@ -13,7 +13,7 @@ public class OutputPrinter {
     }
 
     public static String generateSortersToUseMessage(){
-        return "1. Bubble Sorter\n2. Merge Sorter\n3. Binary Tree Sorter\n4. Insertion Sorter";
+        return "1. Bubble Sorter\n2. Merge Sorter\n3. Binary Tree Sorter\n4. Insertion Sorter\n5. Selection Sorter";
     }
 
     public static String generateSizeOfArrayMessage(){
