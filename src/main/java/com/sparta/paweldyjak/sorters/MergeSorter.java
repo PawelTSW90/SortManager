@@ -24,8 +24,6 @@ public class MergeSorter implements Sorters {
             Logger.log(Level.FINE, "Merge sorter sorting finished");
             return sortedArray;
         }
-
-
     }
 
     public void splitArray(int[] arrayToSplit) {
@@ -52,6 +50,13 @@ public class MergeSorter implements Sorters {
                 splitArray(secondArray);
             }
         }
+    }
+
+    public void startArrayMerging(int indexOfArrayToMerge){
+        while (arrayListToSort.size()>1){
+            mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
+        }
+
     }
     public int[] mergeArray(int[] firstArray, int[] secondArray, int startIndexOfArraysToMerge) {
         int firstArrayLength = firstArray.length;

@@ -5,10 +5,12 @@ import java.util.logging.*;
 
 public class Logger {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger("Sorters Logger");
-    public static void log(Level level, String message){
+
+    public static void log(Level level, String message) {
         logger.log(level, message);
     }
-    public static void configLogger(){
+
+    public static void configLogger() {
         try {
             //remove comments from line below to turn on Logger
 
@@ -22,7 +24,7 @@ public class Logger {
         }
     }
 
-    public static void setLoggerLevel(Level level){
+    public static void setLoggerLevel(Level level) {
         logger.setLevel(level);
     }
 
