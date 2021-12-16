@@ -1,7 +1,8 @@
 package com.sparta.paweldyjak.display;
 
 import com.sparta.paweldyjak.SortManagerLoader;
-import com.sparta.paweldyjak.exceptions.WrongUserInputEsception;
+import com.sparta.paweldyjak.exceptions.SorterDoesntExistException;
+import com.sparta.paweldyjak.exceptions.WrongUserInputException;
 
 import java.util.Scanner;
 
@@ -11,36 +12,44 @@ public class UserInputScanner {
     static Scanner userInputScanner = new Scanner(System.in);
 
     public static void getSorterNumberToUse() {
-        //get sorter number from user
+
         while (sorterNumberToUse == 0) {
             try {
+                //check uf user input has correct format
                 if (!userInputScanner.hasNextInt()) {
-                    throw new WrongUserInputEsception("Wrong user input exception");
-                } else{
+                    userInputScanner.next();
+                    throw new WrongUserInputException("Invalid user input. Please try again.");
+                } else {
+                    //check if sorter chosen by user exists
                     sorterNumberToUse = userInputScanner.nextInt();
-                    OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
-                    //call getArraySieToUse method to get array number from user
-                    getArraySizeToUse();
+                    if (!SortManagerLoader.checkIfSorterClassExists(sorterNumberToUse)) {
+                        throw new SorterDoesntExistException("Sorter doesn't exist. Please try again.");
+                    } else {
+
+                        OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
+                        //call getArraySieToUse method to get array number from user
+                        getArraySizeToUse();
+                    }
                 }
-            } catch (WrongUserInputEsception e) {
+            } catch (WrongUserInputException | SorterDoesntExistException e) {
                 System.out.println(e.getMessage());
-                userInputScanner.next();
+                sorterNumberToUse = 0;
             }
         }
 
     }
 
-    public static void getArraySizeToUse(){
+    public static void getArraySizeToUse() {
         while (arraySizeToGenerate == 0) {
             try {
                 if (!userInputScanner.hasNextInt()) {
-                    throw new WrongUserInputEsception("Wrong user input exception");
-                } else{
+                    throw new WrongUserInputException("Wrong user input exception");
+                } else {
                     arraySizeToGenerate = userInputScanner.nextInt();
                     //call sorterConfig method to pass user data and run sorter
                     SortManagerLoader.sorterConfig(sorterNumberToUse, arraySizeToGenerate);
                 }
-            } catch (WrongUserInputEsception e) {
+            } catch (WrongUserInputException e) {
                 System.out.println(e.getMessage());
                 userInputScanner.next();
             }
