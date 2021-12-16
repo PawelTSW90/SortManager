@@ -20,7 +20,7 @@ public class OutputPrinterTest {
     @Test
     @DisplayName("Generate Sorters to use Test")
     void generateSortersToUseTest() {
-        Assertions.assertEquals("1. Bubble Sorter\n2. Insertion Sorter", OutputPrinter.generateSortersToUseMessage());
+        Assertions.assertEquals("1. Bubble Sorter\n2. Insertion Sorter", OutputPrinter.generateSortersToUseMessageFromFile());
 
     }
 

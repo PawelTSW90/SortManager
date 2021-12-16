@@ -14,7 +14,7 @@ public class SortManagerLoader {
 
         //call Output Printer to print start message and set scanner
         OutputPrinter.printMessage(OutputPrinter.generateStartMessage());
-        OutputPrinter.printMessage(OutputPrinter.generateSortersToUseMessage());
+        OutputPrinter.printMessage(OutputPrinter.generateSortersToUseMessageFromFile());
         UserInputScanner.getSorterNumberToUse();
 
     }
