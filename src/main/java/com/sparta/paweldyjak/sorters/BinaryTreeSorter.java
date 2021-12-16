@@ -6,6 +6,7 @@ import java.util.List;
 
 public class BinaryTreeSorter implements Sorters {
     private BinaryTree binaryTree;
+    private Long sortingTime;
 
     public void createBinaryTree(int[] arrayInput) {
         //convert arrayInput to treeValues list to create root node from first value, and after delete it from arrayInput
@@ -23,14 +24,18 @@ public class BinaryTreeSorter implements Sorters {
 
     @Override
     public int[] sort(int[] arrayToSort) {
+        Long startTime = System.nanoTime();
         createBinaryTree(arrayToSort);
         binaryTree.sortTreeAsc(binaryTree.getRootNode());
-        return binaryTree.getAscSortedTreeValues().stream().mapToInt(i -> i).toArray();
+        int[] sortedArray = binaryTree.getAscSortedTreeValues().stream().mapToInt(i -> i).toArray();
+        Long endTime = System.nanoTime();
+        sortingTime = endTime - startTime;
+        return sortedArray;
     }
 
     @Override
     public Long getSortingTime() {
-        return binaryTree.getSortingTime();
+        return sortingTime;
     }
 
     @Override

@@ -35,7 +35,7 @@ public class SortManagerLoader {
 
         //run sorter and get its return values
         int[] sortedArray = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
-        Logger.log(Level.FINE, "Sorting finished");
+
         Long sortingTime = sorter.getSortingTime();
         String sorterName = sorter.getSorterName();
 

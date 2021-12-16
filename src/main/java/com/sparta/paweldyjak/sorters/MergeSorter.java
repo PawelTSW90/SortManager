@@ -5,17 +5,19 @@ import java.util.List;
 
 public class MergeSorter implements Sorters {
     private Long sortingTime;
-    private Long startTime;
     private final List<int[]> arrayListToSort = new ArrayList<>();
 
     @Override
     public int[] sort(int[] arrayToSort) {
-        startTime = System.nanoTime();
+        Long startTime = System.nanoTime();
         if (arrayToSort.length == 1) {
             return arrayToSort;
         } else {
             splitArray(arrayToSort);
-            return mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
+            int[] sortedArray = mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
+            Long endTime = System.nanoTime();
+            sortingTime = endTime - startTime;
+            return sortedArray;
         }
 
 
@@ -99,8 +101,6 @@ public class MergeSorter implements Sorters {
             }
             mergeArray(arrayListToSort.get(startIndexOfArraysToMerge), arrayListToSort.get(startIndexOfArraysToMerge + 1), startIndexOfArraysToMerge);
         }
-        long endTime = System.nanoTime();
-        sortingTime = endTime - startTime;
         return arrayListToSort.get(0);
     }
 

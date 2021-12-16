@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree implements BinaryTreeI {
-    private Long sortingTime;
     private final Node rootNode;
     private final List<Integer> elementsList = new ArrayList<>();
     private final List<Integer> ascSortedTreeValues = new ArrayList<>();
@@ -25,14 +24,11 @@ public class BinaryTree implements BinaryTreeI {
     }
 
     public void sortTreeAsc(Node node) {
-        long startTime = System.nanoTime();
         if (node != null) {
             sortTreeAsc(node.getLeftChild());
             ascSortedTreeValues.add(node.value);
             sortTreeAsc(node.getRightChild());
         }
-        long endTime = System.nanoTime();
-        sortingTime = endTime - startTime;
     }
 
     @Override
@@ -42,17 +38,11 @@ public class BinaryTree implements BinaryTreeI {
     }
 
     public void sortTreeDesc(Node node){
-        long startTime = System.nanoTime();
         if (node != null) {
             sortTreeDesc(node.getRightChild());
             descSortedTreeValues.add(node.value);
             sortTreeDesc(node.getLeftChild());
         }
-        long endTime = System.nanoTime();
-        sortingTime = endTime - startTime;
-    }
-    public Long getSortingTime() {
-        return sortingTime;
     }
 
     public List<Integer> getAscSortedTreeValues() {

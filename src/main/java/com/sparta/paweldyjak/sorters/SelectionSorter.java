@@ -1,7 +1,5 @@
 package com.sparta.paweldyjak.sorters;
 
-import java.util.Arrays;
-
 public class SelectionSorter implements Sorters {
     private long sortingTime;
 
