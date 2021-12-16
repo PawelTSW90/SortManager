@@ -1,6 +1,7 @@
 package com.sparta.paweldyjak.display;
 
 import com.sparta.paweldyjak.SortManagerLoader;
+import com.sparta.paweldyjak.exceptions.ArraySizeMustBeGreaterThanZeroException;
 import com.sparta.paweldyjak.exceptions.SorterDoesntExistException;
 import com.sparta.paweldyjak.exceptions.WrongUserInputException;
 
@@ -43,15 +44,20 @@ public class UserInputScanner {
         while (arraySizeToGenerate == 0) {
             try {
                 if (!userInputScanner.hasNextInt()) {
-                    throw new WrongUserInputException("Wrong user input exception");
+                    userInputScanner.next();
+                    throw new WrongUserInputException("Invalid user input. Please try again.");
                 } else {
                     arraySizeToGenerate = userInputScanner.nextInt();
-                    //call sorterConfig method to pass user data and run sorter
-                    SortManagerLoader.sorterConfig(sorterNumberToUse, arraySizeToGenerate);
+                    if (arraySizeToGenerate==0) {
+                        throw new ArraySizeMustBeGreaterThanZeroException("Array size must be greater than 0. Please try again.");
+                    } else {
+                        //call sorterConfig method to pass user data and run sorter
+                        SortManagerLoader.sorterConfig(sorterNumberToUse, arraySizeToGenerate);
+                    }
                 }
-            } catch (WrongUserInputException e) {
+            } catch (WrongUserInputException| ArraySizeMustBeGreaterThanZeroException e) {
                 System.out.println(e.getMessage());
-                userInputScanner.next();
+
             }
         }
 
