@@ -37,7 +37,7 @@ public class BinaryTree implements BinaryTreeI {
         return descSortedTreeValues.stream().mapToInt(i -> i).toArray();
     }
 
-    public void sortTreeDesc(Node node){
+    public void sortTreeDesc(Node node) {
         if (node != null) {
             sortTreeDesc(node.getRightChild());
             descSortedTreeValues.add(node.value);
@@ -96,12 +96,19 @@ public class BinaryTree implements BinaryTreeI {
 
     @Override
     public int getLeftChild(int element) throws ChildNotFoundException {
-        return 0;
+        if (findNode(element).getLeftChild() == null) {
+            throw new ChildNotFoundException("Child not found");
+        }
+        return findNode(element).getLeftChild().value;
     }
+
 
     @Override
     public int getRightChild(int element) throws ChildNotFoundException {
-        return 0;
+        if (findNode(element).getRightChild() == null) {
+            throw new ChildNotFoundException("Child not found");
+        }
+        return findNode(element).getLeftChild().value;
     }
 
     private void addNodeToTree(Node node, final int element) {
