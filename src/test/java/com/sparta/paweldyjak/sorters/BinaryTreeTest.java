@@ -50,7 +50,8 @@ public class BinaryTreeTest {
     @DisplayName("Add Element Test")
     void addElementTest() {
         binaryTree = new BinaryTree(1);
-        Assertions.assertEquals(true, binaryTree.findElement(1));
+        binaryTree.addElement(8);
+        Assertions.assertEquals(true, binaryTree.findElement(8));
 
     }
 
