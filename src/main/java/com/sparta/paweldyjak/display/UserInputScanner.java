@@ -15,7 +15,7 @@ public class UserInputScanner {
         while (sorterNumberToUse == 0) {
             try {
                 if (!userInputScanner.hasNextInt()) {
-                    throw new WrongUserInputEsception();
+                    throw new WrongUserInputEsception("Wrong user input exception");
                 } else{
                     sorterNumberToUse = userInputScanner.nextInt();
                     OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
@@ -34,7 +34,7 @@ public class UserInputScanner {
         while (arraySizeToGenerate == 0) {
             try {
                 if (!userInputScanner.hasNextInt()) {
-                    throw new WrongUserInputEsception();
+                    throw new WrongUserInputEsception("Wrong user input exception");
                 } else{
                     arraySizeToGenerate = userInputScanner.nextInt();
                     //call sorterConfig method to pass user data and run sorter

@@ -6,7 +6,4 @@ public class WrongUserInputEsception extends Exception{
         super(message);
     }
 
-    public WrongUserInputEsception(){
-        super("Wrong user input. Please type a number");
-    }
 }
