@@ -1,5 +1,7 @@
 package com.sparta.paweldyjak.sorters.BinaryTree;
 
+import com.sparta.paweldyjak.exceptions.ChildNotFoundException;
+
 public interface BinaryTreeI {
 
     int getRootElement();
@@ -12,9 +14,9 @@ public interface BinaryTreeI {
 
     boolean findElement(int value);
 
-    /*int getLeftChild(int element) throws ChildNotFoundException;
+    int getLeftChild(int element) throws ChildNotFoundException;
 
-    int getRightChild(int element) throws ChildNotFoundException;*/
+    int getRightChild(int element) throws ChildNotFoundException;
 
     int[] getSortedTreeAsc();
 
