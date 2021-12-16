@@ -1,5 +1,7 @@
 package com.sparta.paweldyjak.sorters.BinaryTree;
 
+import com.sparta.paweldyjak.exceptions.ChildNotFoundException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,6 +102,16 @@ public class BinaryTree implements BinaryTreeI {
     public boolean findElement(final int value) {
         Node node = findNode(value);
         return node != null;
+    }
+
+    @Override
+    public int getLeftChild(int element) throws ChildNotFoundException {
+        return 0;
+    }
+
+    @Override
+    public int getRightChild(int element) throws ChildNotFoundException {
+        return 0;
     }
 
     private void addNodeToTree(Node node, final int element) {
