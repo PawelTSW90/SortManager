@@ -35,16 +35,16 @@ public class BinaryTree implements BinaryTreeI {
 
     @Override
     public int[] getSortedTreeDesc() {
-        sortTreeAsc(getRootNode());
+        sortTreeDesc(getRootNode());
         return descSortedTreeValues.stream().mapToInt(i -> i).toArray();
     }
 
     public void sortTreeDesc(Node node){
         long startTime = System.nanoTime();
         if (node != null) {
-            sortTreeAsc(node.getRightChild());
+            sortTreeDesc(node.getRightChild());
             descSortedTreeValues.add(node.value);
-            sortTreeAsc(node.getLeftChild());
+            sortTreeDesc(node.getLeftChild());
         }
         long endTime = System.nanoTime();
         sortingTime = endTime - startTime;
