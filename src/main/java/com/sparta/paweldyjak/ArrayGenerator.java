@@ -8,7 +8,7 @@ public class ArrayGenerator {
         int[] generatedArray = new int[arraySize];
         //add random numbers to generatedArray
         for (int i = 0; i < arraySize; i++) {
-            generatedArray[i] = random.nextInt(1000);
+            generatedArray[i] = random.nextInt(arraySize);
         }
         return generatedArray;
     }
