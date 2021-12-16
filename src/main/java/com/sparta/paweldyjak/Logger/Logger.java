@@ -10,7 +10,7 @@ public class Logger {
     }
     public static void configLogger(){
         try {
-            setLoggerLevel(Level.ALL);
+            setLoggerLevel(Level.OFF);
             Handler fileHandler = new FileHandler("src/main/java/com/sparta/paweldyjak/sortManagerLog.log", true);
             logger.addHandler(fileHandler);
             fileHandler.setFormatter(new LoggerFormatter());
