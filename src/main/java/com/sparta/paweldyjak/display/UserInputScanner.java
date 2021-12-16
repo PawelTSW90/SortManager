@@ -4,7 +4,6 @@ import com.sparta.paweldyjak.SortManagerLoader;
 import com.sparta.paweldyjak.exceptions.ArraySizeMustBeGreaterThanZeroException;
 import com.sparta.paweldyjak.exceptions.SorterDoesntExistException;
 import com.sparta.paweldyjak.exceptions.WrongUserInputException;
-
 import java.util.Scanner;
 
 public class UserInputScanner {
@@ -26,7 +25,6 @@ public class UserInputScanner {
                     if (!SortManagerLoader.checkIfSorterClassExists(sorterNumberToUse)) {
                         throw new SorterDoesntExistException("Sorter doesn't exist. Please try again.");
                     } else {
-
                         OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
                         //call getArraySieToUse method to get array number from user
                         getArraySizeToUse();
@@ -37,10 +35,10 @@ public class UserInputScanner {
                 sorterNumberToUse = 0;
             }
         }
-
     }
 
     public static void getArraySizeToUse() {
+
         while (arraySizeToGenerate == 0) {
             try {
                 if (!userInputScanner.hasNextInt()) {
@@ -57,9 +55,7 @@ public class UserInputScanner {
                 }
             } catch (WrongUserInputException| ArraySizeMustBeGreaterThanZeroException e) {
                 System.out.println(e.getMessage());
-
             }
         }
-
     }
 }
