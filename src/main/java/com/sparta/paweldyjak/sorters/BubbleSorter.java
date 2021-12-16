@@ -1,11 +1,16 @@
 package com.sparta.paweldyjak.sorters;
 
 
+import com.sparta.paweldyjak.Logger.Logger;
+
+import java.util.logging.Level;
+
 public class BubbleSorter implements Sorters {
     private Long sortingTime;
 
     @Override
     public int[] sort(int[] array) {
+        Logger.log(Level.FINE, "Bubble sorter sorting started");
         long startTime = System.nanoTime();
         boolean noIteration = false;
         int tmpNumber;
@@ -24,6 +29,7 @@ public class BubbleSorter implements Sorters {
         }
         long endTime = System.nanoTime();
         sortingTime = endTime - startTime;
+        Logger.log(Level.FINE, "Bubble sorter sorting finished");
         return array;
     }
 

@@ -1,10 +1,15 @@
 package com.sparta.paweldyjak.sorters;
 
+import com.sparta.paweldyjak.Logger.Logger;
+
+import java.util.logging.Level;
+
 public class SelectionSorter implements Sorters {
     private long sortingTime;
 
     @Override
     public int[] sort(int[] arrayToSort) {
+        Logger.log(Level.FINE, "Selection sorter sorting started");
         long startTime = System.nanoTime();
         int firstUnsortedNumberIndex = 0;
         int tmpNumber;
@@ -34,6 +39,7 @@ public class SelectionSorter implements Sorters {
         }
         long endTime = System.nanoTime();
         sortingTime = endTime - startTime;
+        Logger.log(Level.FINE, "Selection sorter sorting finished");
         return arrayToSort;
     }
 

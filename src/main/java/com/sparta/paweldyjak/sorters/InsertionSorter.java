@@ -1,10 +1,15 @@
 package com.sparta.paweldyjak.sorters;
 
+import com.sparta.paweldyjak.Logger.Logger;
+
+import java.util.logging.Level;
+
 public class InsertionSorter implements Sorters{
     private Long sortingTime;
 
     @Override
     public int[] sort(int[] arrayToSort) {
+        Logger.log(Level.FINE, "Insertion sorter sorting started");
         long startTime = System.nanoTime();
         int tmpValue;
         //iterate array until previous array value is bigger than current one
@@ -30,6 +35,7 @@ public class InsertionSorter implements Sorters{
         }
         long endTime = System.nanoTime();
         sortingTime = endTime - startTime;
+        Logger.log(Level.FINE, "Insertion sorter sorting started");
         return arrayToSort;
     }
     /*move array values front, starting from value less than current one, ending on current value index

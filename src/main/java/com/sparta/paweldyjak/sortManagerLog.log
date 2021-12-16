@@ -1,10 +1,12 @@
 
-16.12.2021, 20:59 FINE Logger configuration finished
-16.12.2021, 20:59 FINE Sort Manager application started
-16.12.2021, 20:59 FINE Start Message printed
-16.12.2021, 20:59 FINE Sorters list printed out from file
-16.12.2021, 20:59 FINE Sorter found in sortersList.txt
-16.12.2021, 20:59 FINE Random array generated
-16.12.2021, 20:59 FINE Sorter object created
-16.12.2021, 20:59 FINE Sorting finished
-16.12.2021, 20:59 FINE Final message printed. Closing application
+16.12.2021, 21:50 FINE Logger configuration finished
+16.12.2021, 21:50 FINE Sort Manager application started
+16.12.2021, 21:50 FINE Start Message printed
+16.12.2021, 21:50 FINE Sorters list printed out from file
+16.12.2021, 21:51 FINE Sorter found in sortersList.txt
+16.12.2021, 21:51 FINE Random array generated
+16.12.2021, 21:51 FINE Selection Sorter object created
+16.12.2021, 21:51 FINE Selection sorter sorting started
+16.12.2021, 21:51 FINE Selection sorter sorting finished
+16.12.2021, 21:51 FINE Final message printed
+Closing application

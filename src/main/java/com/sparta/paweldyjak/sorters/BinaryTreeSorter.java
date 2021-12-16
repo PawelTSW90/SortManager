@@ -1,8 +1,10 @@
 package com.sparta.paweldyjak.sorters;
 
+import com.sparta.paweldyjak.Logger.Logger;
 import com.sparta.paweldyjak.sorters.BinaryTree.BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class BinaryTreeSorter implements Sorters {
     private BinaryTree binaryTree;
@@ -24,12 +26,14 @@ public class BinaryTreeSorter implements Sorters {
 
     @Override
     public int[] sort(int[] arrayToSort) {
+        Logger.log(Level.FINE, "Binary Tree sorting started");
         Long startTime = System.nanoTime();
         createBinaryTree(arrayToSort);
         binaryTree.sortTreeAsc(binaryTree.getRootNode());
         int[] sortedArray = binaryTree.getAscSortedTreeValues().stream().mapToInt(i -> i).toArray();
         Long endTime = System.nanoTime();
         sortingTime = endTime - startTime;
+        Logger.log(Level.FINE, "Binary Tree sorting finished");
         return sortedArray;
     }
 

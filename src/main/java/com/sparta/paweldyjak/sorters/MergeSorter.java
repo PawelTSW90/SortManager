@@ -1,7 +1,10 @@
 package com.sparta.paweldyjak.sorters;
 
+import com.sparta.paweldyjak.Logger.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class MergeSorter implements Sorters {
     private Long sortingTime;
@@ -9,6 +12,7 @@ public class MergeSorter implements Sorters {
 
     @Override
     public int[] sort(int[] arrayToSort) {
+        Logger.log(Level.FINE, "Merge sorter sorting started");
         Long startTime = System.nanoTime();
         if (arrayToSort.length == 1) {
             return arrayToSort;
@@ -17,6 +21,7 @@ public class MergeSorter implements Sorters {
             int[] sortedArray = mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
             Long endTime = System.nanoTime();
             sortingTime = endTime - startTime;
+            Logger.log(Level.FINE, "Merge sorter sorting finished");
             return sortedArray;
         }
 

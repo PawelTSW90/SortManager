@@ -31,7 +31,7 @@ public class SortManagerLoader {
 
         //set sorter chosen by user
         Sorters sorter = SortersFactory.getSorter(sorterNumber);
-        Logger.log(Level.FINE, "Sorter object created");
+
 
         //run sorter and get its return values
         int[] sortedArray = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
@@ -41,7 +41,7 @@ public class SortManagerLoader {
 
         //call method that shows final output
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage(sorterName, unsortedArray, sortedArray, sortingTime));
-        Logger.log(Level.FINE, "Final message printed. Closing application");
+        Logger.log(Level.FINE, "Final message printed\nClosing application");
 
     }
 
