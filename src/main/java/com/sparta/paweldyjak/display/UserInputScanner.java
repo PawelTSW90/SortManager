@@ -30,7 +30,7 @@ public class UserInputScanner {
                     } else {
                         OutputPrinter.printMessage(OutputPrinter.generateSizeOfArrayMessage());
                         //call getArraySieToUse method to get array number from user
-                        getArraySizeToUse();
+                        getArraySizeToGenerate();
                     }
                 }
             } catch (WrongUserInputException | SorterDoesntExistException e) {
@@ -40,7 +40,7 @@ public class UserInputScanner {
         }
     }
 
-    public static void getArraySizeToUse() {
+    public static void getArraySizeToGenerate() {
 
         while (arraySizeToGenerate == 0) {
             try {
