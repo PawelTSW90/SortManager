@@ -1,7 +1,10 @@
 package com.sparta.paweldyjak.display;
 
+import com.sparta.paweldyjak.Logger.Logger;
+
 import java.io.*;
 import java.util.Arrays;
+import java.util.logging.Level;
 
 public class OutputPrinter {
 
@@ -27,8 +30,10 @@ public class OutputPrinter {
                 }
             }
             fileReader.close();
+            Logger.log(Level.FINE, "Sorters list printed out from file");
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.log(Level.SEVERE, "sortersList.txt file not found! Closing application.");
+            System.exit(1);
         }
         return fileString.toString();
     }

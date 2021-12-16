@@ -1,21 +1,24 @@
 package com.sparta.paweldyjak;
 
-import com.sparta.paweldyjak.Logger.MyLogger;
+import com.sparta.paweldyjak.Logger.Logger;
 import com.sparta.paweldyjak.display.OutputPrinter;
 import com.sparta.paweldyjak.display.UserInputScanner;
 import com.sparta.paweldyjak.sorters.Sorters;
 import com.sparta.paweldyjak.sorters.SortersFactory;
 import java.io.*;
 import java.util.Arrays;
+import java.util.logging.Level;
 
 public class SortManagerLoader {
 
     public static void getUserInput() {
         //config Logger
-        MyLogger.configLogger();
+        Logger.configLogger();
+        Logger.log(Level.FINE, "Sort Manager application started");
 
         //call Output Printer to print start message and set scanner
         OutputPrinter.printMessage(OutputPrinter.generateStartMessage());
+        Logger.log(Level.FINE, "Start Message printed");
         OutputPrinter.printMessage(OutputPrinter.generateSortersToUseMessageFromFile());
         UserInputScanner.getSorterNumberToUse();
 
@@ -57,12 +60,15 @@ public class SortManagerLoader {
             classNameString = classNameString.replace(" ", "");
             File testFile = new File("src/main/java/com/sparta/paweldyjak/sorters/" + classNameString + ".java");
             if (testFile.exists()) {
+                Logger.log(Level.FINE, "Sorter found in sortersList.txt");
                 return true;
             }
             fileReader.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.log(Level.SEVERE, "sortersList.txt file not found! Closing application.");
+            System.exit(1);
         }
+        Logger.log(Level.WARNING, "Sorter not found in sortersList.txt");
         return false;
     }
 }
