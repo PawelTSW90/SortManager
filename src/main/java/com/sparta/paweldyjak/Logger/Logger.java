@@ -13,8 +13,8 @@ public class Logger {
     public static void configLogger() {
         try {
             //remove comments from line below to turn on Logger
-
-            setLoggerLevel(Level.OFF);
+            logger.setLevel(Level.ALL);
+            logger.setUseParentHandlers(false);
             Handler fileHandler = new FileHandler("src/main/java/com/sparta/paweldyjak/sortManagerLog.log", true);
             logger.addHandler(fileHandler);
             fileHandler.setFormatter(new LoggerFormatter());
