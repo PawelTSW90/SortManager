@@ -1,5 +1,6 @@
 package com.sparta.paweldyjak.sorters;
 
+import com.sparta.paweldyjak.exceptions.ChildNotFoundException;
 import com.sparta.paweldyjak.sorters.BinaryTree.BinaryTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -63,6 +64,24 @@ public class BinaryTreeTest {
         Assertions.assertEquals(true, binaryTree.findElement(1));
         Assertions.assertEquals(true, binaryTree.findElement(3));
         Assertions.assertEquals(true, binaryTree.findElement(5));
+
+    }
+
+    @Test
+    @DisplayName("Get Left Child Test")
+    void getLeftChildTest() throws ChildNotFoundException {
+        binaryTree = new BinaryTree(10);
+        binaryTree.addElement(5);
+        Assertions.assertEquals(5, binaryTree.getLeftChild(10));
+
+    }
+
+    @Test
+    @DisplayName("Get Right Child Test")
+    void getRightChildTest() throws ChildNotFoundException {
+        binaryTree = new BinaryTree(10);
+        binaryTree.addElement(15);
+        Assertions.assertEquals(15, binaryTree.getRightChild(10));
 
     }
 

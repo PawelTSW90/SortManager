@@ -2,6 +2,9 @@ package com.sparta.paweldyjak.sorters.BinaryTree;
 
 import com.sparta.paweldyjak.exceptions.ChildNotFoundException;
 
+/**
+ *Binary Tree Interface
+ */
 public interface BinaryTreeI {
 
     int getRootElement();
