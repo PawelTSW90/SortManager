@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SortersTest {
-    Sorters sorter = SortersFactory.getSorter(5);
+    Sorters sorter = SortersFactory.getSorter(2);
 
     @Test
     @DisplayName("Single Value Array Sort Test")

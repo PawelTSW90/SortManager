@@ -18,7 +18,7 @@ public class MergeSorter implements Sorters {
             return arrayToSort;
         } else {
             splitArray(arrayToSort);
-            int[] sortedArray = startArrayMerging();
+            int[] sortedArray = startArrayMerging(0);
             Long endTime = System.nanoTime();
             sortingTime = endTime - startTime;
             Logger.log(Level.FINE, "Merge sorter sorting finished");
@@ -52,12 +52,32 @@ public class MergeSorter implements Sorters {
         }
     }
 
-    public int[] startArrayMerging(){
-        while (arrayListToSort.size()>1){
+    public int[] startArrayMerging(int firstArrayToMergeIndex) {
+        while (arrayListToSort.size() > 1) {
+            try {
+                int[] mergedArray = mergeTwoArrays(arrayListToSort.get(firstArrayToMergeIndex),
+                        arrayListToSort.get(firstArrayToMergeIndex + 1));
+                arrayListToSort.set(firstArrayToMergeIndex, mergedArray);
+                arrayListToSort.remove(firstArrayToMergeIndex + 1);
+                firstArrayToMergeIndex++;
+                //if there is odd number of arrays, skip last one ane restart merging
+            } catch (IndexOutOfBoundsException e) {
+                startArrayMerging(0);
+            }
         }
-return new int[1];
+        return arrayListToSort.get(0);
+
     }
-    public int[] mergeArrays(int[] firstArray, int[] secondArray) {
+
+    public static void main(String[] args) {
+        MergeSorter mergeSorter = new MergeSorter();
+        int[] arrayToSort = new int[]{5, 4, 3, 2, 1};
+        mergeSorter.splitArray(arrayToSort);
+        mergeSorter.startArrayMerging(0);
+
+    }
+
+    public int[] mergeTwoArrays(int[] firstArray, int[] secondArray) {
         int firstArrayLength = firstArray.length;
         int secondArrayLength = secondArray.length;
         int firstArrayIndex = 0, secondArrayIndex = 0, mergeIndex = 0;
