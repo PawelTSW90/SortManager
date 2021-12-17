@@ -1,0 +1,5 @@
+1. Bubble Sorter
+2. Merge Sorter
+3. Binary Tree Sorter
+4. Insertion Sorter
+5. Selection Sorter
