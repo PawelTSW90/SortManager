@@ -4,8 +4,15 @@ import com.sparta.paweldyjak.Logger.Logger;
 
 import java.util.logging.Level;
 
+/**
+ * Class creates and returns chosen Sorters object.
+ */
 public class SortersFactory {
-
+    /**
+     * Creates and returns chosen Sorters object.
+     * @param numberOfSorter Number of sorter to create.
+     * @return Sorters object.
+     */
     public static Sorters getSorter(int numberOfSorter) {
         if (numberOfSorter == 1) {
             Logger.log(Level.FINE, "Bubble Sorter object created");

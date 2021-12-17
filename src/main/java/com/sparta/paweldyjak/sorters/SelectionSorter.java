@@ -6,7 +6,11 @@ import java.util.logging.Level;
 
 public class SelectionSorter implements Sorters {
     private long sortingTime;
-
+    /**
+     * Sorts array by using Selection sort algorithm and counts sorting time.
+     * @param arrayToSort Array to sort.
+     * @return Sorted array.
+     */
     @Override
     public int[] sort(int[] arrayToSort) {
         Logger.log(Level.FINE, "Selection sorter sorting started");
@@ -42,12 +46,18 @@ public class SelectionSorter implements Sorters {
         Logger.log(Level.FINE, "Selection sorter sorting finished");
         return arrayToSort;
     }
-
+    /**
+     * Returns Long with Selection Sorter sorting time.
+     * @return Long with Selection Sorter sorting time.
+     */
     @Override
     public Long getSortingTime() {
         return sortingTime;
     }
-
+    /**
+     * Returns String with Selection Sorter name.
+     * @return String with Selection Sorter name.
+     */
     @Override
     public String getSorterName() {
         return "Selection Sorter";
