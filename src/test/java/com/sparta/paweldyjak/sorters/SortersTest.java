@@ -5,9 +5,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test checks if sorter algorithm works properly. Use number of sorter in sorter object constructor to choose sorter.
+ */
 public class SortersTest {
     Sorters sorter = SortersFactory.getSorter(2);
 
+    /**
+     * Single value array test.
+     */
     @Test
     @DisplayName("Single Value Array Sort Test")
     void singleValueArrayTest() {
@@ -16,6 +22,9 @@ public class SortersTest {
 
     }
 
+    /**
+     * Even array sort test.
+     */
     @Test
     @DisplayName("Even Array Sort Test")
     void evenArraySortTest() {
@@ -26,6 +35,9 @@ public class SortersTest {
 
     }
 
+    /**
+     * Odd array sort test.
+     */
     @Test
     @DisplayName("Odd Array Sort Test")
     void oddArraySortTest() {
@@ -35,6 +47,9 @@ public class SortersTest {
 
     }
 
+    /**
+     * Array with duplicate values test.
+     */
     @Test
     @DisplayName("Array with duplicate values Test")
     void arrayWithDuplicateValuesTest() {
@@ -44,6 +59,9 @@ public class SortersTest {
 
     }
 
+    /**
+     * Large array test.
+     */
     @Test
     @DisplayName("Large Array Test")
     void largeArrayTest() {
@@ -53,6 +71,9 @@ public class SortersTest {
 
     }
 
+    /**
+     * Negative values array test.
+     */
     @Test
     @DisplayName("Negative Values Array Test")
     void negativeValuesArrayTest() {
@@ -61,9 +82,5 @@ public class SortersTest {
         Assertions.assertArrayEquals(expectedArray, sorter.sort(array));
 
     }
-
-
-
-
 
 }

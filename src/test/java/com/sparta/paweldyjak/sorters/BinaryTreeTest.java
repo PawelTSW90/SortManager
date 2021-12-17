@@ -6,9 +6,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * BinaryTree test.
+ */
 public class BinaryTreeTest {
     private BinaryTree binaryTree;
 
+    /**
+     * getSortedTreeAsc test.
+     */
     @Test
     @DisplayName("Get Sorted Tree Asc Test")
     void getSortedTreeAscTest() {
@@ -20,6 +26,9 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * getSortedTreeDesc test.
+     */
     @Test
     @DisplayName("Get Sorted Tree Desc Test")
     void getSortedTreeDescTest() {
@@ -30,6 +39,9 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * getRootElement test.
+     */
     @Test
     @DisplayName("Get Root Element Test")
     void getRootElementTest() {
@@ -38,6 +50,9 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * getNumberOfElements test.
+     */
     @Test
     @DisplayName("Get Number of Elements Test")
     void getNumberOfElementsTest() {
@@ -47,6 +62,9 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * addElement test.
+     */
     @Test
     @DisplayName("Add Element Test")
     void addElementTest() {
@@ -56,6 +74,9 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * addElements test.
+     */
     @Test
     @DisplayName("Add Elements Test")
     void addElementsTest() {
@@ -67,6 +88,10 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * getLeftChild test
+     * @throws ChildNotFoundException If element haven't got left child.
+     */
     @Test
     @DisplayName("Get Left Child Test")
     void getLeftChildTest() throws ChildNotFoundException {
@@ -76,6 +101,10 @@ public class BinaryTreeTest {
 
     }
 
+    /**
+     * getRightChild test.
+     * @throws ChildNotFoundException If element haven't got right child.
+     */
     @Test
     @DisplayName("Get Right Child Test")
     void getRightChildTest() throws ChildNotFoundException {

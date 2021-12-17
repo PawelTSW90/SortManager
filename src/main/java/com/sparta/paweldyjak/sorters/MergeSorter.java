@@ -1,15 +1,24 @@
 package com.sparta.paweldyjak.sorters;
 
 import com.sparta.paweldyjak.Logger.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+
+/**
+ * Sorts array by using Merge sort algorithm. Algorithm divides the unsorted array into n subarrays, each containing one element and
+ * Repeatedly merge subarrays to produce new sorted subarrays until there is only one array remaining.
+ */
 
 public class MergeSorter implements Sorters {
     private Long sortingTime;
     private final List<int[]> arrayListToSort = new ArrayList<>();
 
+    /**
+     * Calls arraySplit to split array, calls arraysListToSortRefactor to start merging arrays and returns sorted array.
+     * @param arrayToSort Array to sort.
+     * @return Sorted array.
+     */
     @Override
     public int[] sort(int[] arrayToSort) {
         Logger.log(Level.FINE, "Merge sorter sorting started");
@@ -17,8 +26,8 @@ public class MergeSorter implements Sorters {
         if (arrayToSort.length == 1) {
             return arrayToSort;
         } else {
-            splitArray(arrayToSort);
-            int[] sortedArray = startArrayMerging(0);
+            arraySplit(arrayToSort);
+            int[] sortedArray = arraysListToSortRefactor(0);
             Long endTime = System.nanoTime();
             sortingTime = endTime - startTime;
             Logger.log(Level.FINE, "Merge sorter sorting finished");
@@ -26,33 +35,39 @@ public class MergeSorter implements Sorters {
         }
     }
 
-    public void splitArray(int[] arrayToSplit) {
+    /**
+     * Split array into multiple arrays containing just one value, and saves them as arrayListToSort.
+     * @param arrayToSplit Array to split.
+     */
+    public void arraySplit(int[] arrayToSplit) {
         if (arrayToSplit.length == 1) {
             arrayListToSort.add(arrayToSplit);
         } else {
             int arrayMiddle = arrayToSplit.length / 2;
-
-            //split array into two arrays and copy its values
             int[] firstArray = new int[arrayMiddle];
             int[] secondArray = new int[arrayToSplit.length - arrayMiddle];
             System.arraycopy(arrayToSplit, 0, firstArray, 0, firstArray.length);
             System.arraycopy(arrayToSplit, arrayMiddle, secondArray, 0, secondArray.length);
-
-            //do method recursion until array is split into single elements arrays
             if (firstArray.length == 1) {
                 arrayListToSort.add(firstArray);
             } else {
-                splitArray(firstArray);
+                arraySplit(firstArray);
             }
             if (secondArray.length == 1) {
                 arrayListToSort.add(secondArray);
             } else {
-                splitArray(secondArray);
+                arraySplit(secondArray);
             }
         }
     }
 
-    public int[] startArrayMerging(int firstArrayToMergeIndex) {
+    /**
+     * Calls mergeTwoArrays to pass index of arraysListToSort where merging should start and saves merged array into list until all subarrays are
+     * merged.
+     * @param firstArrayToMergeIndex Index of arrayListToSort where merge should start.
+     * @return Merged array.
+     */
+    public int[] arraysListToSortRefactor(int firstArrayToMergeIndex) {
         while (arrayListToSort.size() > 1) {
             try {
                 int[] mergedArray = mergeTwoArrays(arrayListToSort.get(firstArrayToMergeIndex),
@@ -62,30 +77,23 @@ public class MergeSorter implements Sorters {
                 firstArrayToMergeIndex++;
                 //if there is odd number of arrays, skip last one ane restart merging
             } catch (IndexOutOfBoundsException e) {
-                startArrayMerging(0);
+                arraysListToSortRefactor(0);
             }
         }
         return arrayListToSort.get(0);
 
     }
 
-    public static void main(String[] args) {
-        MergeSorter mergeSorter = new MergeSorter();
-        int[] arrayToSort = new int[]{5, 4, 3, 2, 1};
-        mergeSorter.splitArray(arrayToSort);
-        mergeSorter.startArrayMerging(0);
-
-    }
-
+    /**
+     * Merges two arrays.
+     * @param firstArray First array to merge.
+     * @param secondArray Second array to merge.
+     * @return Merged array.
+     */
     public int[] mergeTwoArrays(int[] firstArray, int[] secondArray) {
-        int firstArrayLength = firstArray.length;
-        int secondArrayLength = secondArray.length;
         int firstArrayIndex = 0, secondArrayIndex = 0, mergeIndex = 0;
-        //prepare new array for two arrays merged
-        int[] mergedArray = new int[firstArrayLength + secondArrayLength];
+        int[] mergedArray = new int[firstArray.length + secondArray.length];
 
-        /*if current value of first array is larger than current value of second array,
-        add it to mergedArray. If not, add current value of second array*/
         for (int i = 0; i < mergedArray.length - 1; i++) {
             if (firstArray[firstArrayIndex] < secondArray[secondArrayIndex]) {
                 mergedArray[mergeIndex] = firstArray[firstArrayIndex];
@@ -96,9 +104,7 @@ public class MergeSorter implements Sorters {
             }
             mergeIndex++;
 
-            /*if all values of one of the array has been added to mergedArray,
-            move to mergedArray remaining values of other array */
-            if (firstArrayIndex == firstArrayLength) {
+            if (firstArrayIndex == firstArray.length) {
                 for (int j = mergeIndex; j < mergedArray.length; j++) {
                     mergedArray[mergeIndex] = secondArray[secondArrayIndex];
                     secondArrayIndex++;
@@ -107,7 +113,7 @@ public class MergeSorter implements Sorters {
                 }
                 continue;
             }
-            if (secondArrayIndex == secondArrayLength) {
+            if (secondArrayIndex == secondArray.length) {
                 for (int j = mergeIndex; j < mergedArray.length; j++) {
                     mergedArray[mergeIndex] = firstArray[firstArrayIndex];
                     firstArrayIndex++;
@@ -119,11 +125,21 @@ public class MergeSorter implements Sorters {
         return mergedArray;
     }
 
+    /**
+     * Returns Long with Merge Sorter sorting time.
+     *
+     * @return Long with Merge Sorter sorting time.
+     */
     @Override
     public Long getSortingTime() {
         return sortingTime;
     }
 
+    /**
+     * Returns String with Merge Sorter name.
+     *
+     * @return String with Merge Sorter name.
+     */
     @Override
     public String getSorterName() {
         return "Merge Sorter";

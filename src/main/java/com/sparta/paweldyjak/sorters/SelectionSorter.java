@@ -1,9 +1,13 @@
 package com.sparta.paweldyjak.sorters;
 
 import com.sparta.paweldyjak.Logger.Logger;
-
 import java.util.logging.Level;
 
+/**
+ * Sorts array by using Selection sorting algorithm. Algorithm sorts an array by repeatedly finding the minimum element from unsorted part
+ * and putting it at the beginning. The algorithm maintains two subarrays in a given array. In every iteration of Selection sort, the minimum element
+ * from the unsorted subarray is picked and moved to the sorted subarray.
+ */
 public class SelectionSorter implements Sorters {
     private long sortingTime;
     /**

@@ -6,9 +6,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.Random;
 
+/**
+ * Test checks all sorters algorithms performance with random array of size 100 and prints results.
+ */
 public class SortersPerformanceTest {
     private static int[] unsortedArray;
 
+    /**
+     * Create random array of size 100 for tests.
+     */
     @BeforeAll
     public static void setup() {
         Random random = new Random();
@@ -19,6 +25,9 @@ public class SortersPerformanceTest {
 
     }
 
+    /**
+     * Bubble Sorter test.
+     */
     @Test
     @DisplayName("Bubble Sorter Test")
     void bubbleSorterTest() {
@@ -31,6 +40,9 @@ public class SortersPerformanceTest {
 
     }
 
+    /**
+     * Merge sorter test.
+     */
     @Test
     @DisplayName("Merge Sorter Test")
     void mergeSorterTest() {
@@ -43,6 +55,9 @@ public class SortersPerformanceTest {
 
     }
 
+    /**
+     * Binary Tree Sorter test.
+     */
     @Test
     @DisplayName("Binary Tree Sorter Test")
     void binaryTreeSorterTest() {
@@ -54,6 +69,9 @@ public class SortersPerformanceTest {
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 
+    /**
+     * Insertion Sorter test.
+     */
     @Test
     @DisplayName("Insertion Sorter Test")
     void InsertionSorterTest() {
@@ -66,6 +84,9 @@ public class SortersPerformanceTest {
 
     }
 
+    /**
+     * Selection Sorter test.
+     */
     @Test
     @DisplayName("Selection Sorter Test")
     void selectionSorterTest() {

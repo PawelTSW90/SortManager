@@ -4,8 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * SortersFactory test.
+ */
 public class SortersFactoryTest {
-
+    /**
+     * getSorter test.
+     */
     @Test
     @DisplayName("Get Sorter Test")
     void getSorterTest() {

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Binary Tree class with Node nested class, uses binary tree sorting and finding algorithm
+ * Binary Tree class with Node nested class, uses binary tree traversal for sorting and finding elements.
  */
 public class BinaryTree implements BinaryTreeI {
     private final Node rootNode;
@@ -13,7 +13,10 @@ public class BinaryTree implements BinaryTreeI {
     private final List<Integer> ascSortedTreeValues = new ArrayList<>();
     private final List<Integer> descSortedTreeValues = new ArrayList<>();
 
-
+    /**
+     * Binary Tree constructor.
+     * @param element Binary Tree element.
+     */
     public BinaryTree(final int element) {
         rootNode = new Node(element);
         elementsList.add(element);
@@ -144,7 +147,7 @@ public class BinaryTree implements BinaryTreeI {
      * Calls findNode method to check if Node with this value exists, and if it is to check if its have left child.
      * @param element Element which left child is searched.
      * @return An Integer with value of elements left child.
-     * @throws ChildNotFoundException If element hasn't got left child.
+     * @throws ChildNotFoundException If element haven't got left child.
      */
     @Override
     public int getLeftChild(int element) throws ChildNotFoundException {
@@ -159,7 +162,7 @@ public class BinaryTree implements BinaryTreeI {
      * Calls findNode method to check if Node with this value exists, and if it is to check if its have right child.
      * @param element Element which right child is searched.
      * @return An Integer with value of elements right child.
-     * @throws ChildNotFoundException If element hasn't got right child.
+     * @throws ChildNotFoundException If element haven't got right child.
      */
     @Override
     public int getRightChild(int element) throws ChildNotFoundException {
@@ -208,6 +211,10 @@ public class BinaryTree implements BinaryTreeI {
         private Node leftChild;
         private Node rightChild;
 
+        /**
+         * Node constructor
+         * @param value Node value.
+         */
         public Node(int value) {
             this.value = value;
         }

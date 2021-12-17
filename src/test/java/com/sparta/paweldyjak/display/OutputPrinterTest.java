@@ -7,9 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+/**
+ * OutputPrinter class tests.
+ */
 public class OutputPrinterTest {
 
-
+    /**
+     * generateStartMessage test.
+     */
     @Test
     @DisplayName("Generate Start Message Test")
     void generateStartMessageTest() {
@@ -17,6 +22,9 @@ public class OutputPrinterTest {
 
     }
 
+    /**
+     * generateSortersToUse test.
+     */
     @Test
     @DisplayName("Generate Sorters to use Test")
     void generateSortersToUseTest() {
@@ -24,6 +32,13 @@ public class OutputPrinterTest {
 
     }
 
+    /**
+     * generateFinalMessage test.
+     * @param sorterName Sorter name.
+     * @param unsortedArray Unsorted array.
+     * @param sortedArray Sorted array.
+     * @param sortingTime Sorting time.
+     */
     @ParameterizedTest
     @DisplayName("Generate Final Message Test")
     @MethodSource("generateFinalOutput")
@@ -34,6 +49,10 @@ public class OutputPrinterTest {
 
     }
 
+    /**
+     * Test source method which generates random arguments for generateFinalMessageTest.
+     * @return Random arguments for generateFinalMessageTest.
+     */
     static Stream<Arguments> generateFinalOutput(){
         return Stream.of(
                 Arguments.arguments("Bubble Sort", new int[]{5,4,3,2,1}, new int[]{1,2,3,4,5}, 134050L),
