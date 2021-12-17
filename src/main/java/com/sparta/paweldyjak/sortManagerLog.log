@@ -127,3 +127,8 @@ Closing application
 17.12.2021, 14:29 FINE Merge sorter sorting finished
 17.12.2021, 14:29 FINE Final message printed
 Closing application
+17.12.2021, 15:24 FINE Logger configuration finished
+17.12.2021, 15:24 FINE Sort Manager application started
+17.12.2021, 15:24 FINE Start Message printed
+17.12.2021, 15:24 FINE Sorters list printed out from file
+17.12.2021, 15:24 WARNING Sorter not found in sortersList.txt
