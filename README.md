@@ -6,15 +6,15 @@ using different sorting algorithms.
 
 Sort Manager allows user to use 5 sorting algorithms:
 
--Bubble Sorter
+Bubble Sorter
 
--Merge Sorter
+Merge Sorter
 
--Binary Tree Sorter
+Binary Tree Sorter
 
--Insertion Sorter
+Insertion Sorter
 
--Selection Sorter
+Selection Sorter
 
 After receiving size of array to be generated and sorted, Sort Manager runs sorter chosen by user.
 When sorting is done, Sort Manager gives user information about sorting time and compares an 
