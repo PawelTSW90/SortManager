@@ -2,15 +2,21 @@ package com.sparta.paweldyjak.display;
 
 import com.sparta.paweldyjak.Logger.Logger;
 import com.sparta.paweldyjak.SortManagerLoader;
-
 import java.util.Scanner;
 import java.util.logging.Level;
 
+
+/**
+ * Scanner class, which collects data from user.
+ */
 public class UserInputScanner {
     static int sorterNumberToUse = 0;
     static int arraySizeToGenerate = 0;
     static Scanner userInputScanner = new Scanner(System.in);
 
+    /**
+     * Collects sorter number from user.
+     */
     public static void getSorterNumberToUse() {
 
         while (sorterNumberToUse == 0) {
@@ -36,6 +42,9 @@ public class UserInputScanner {
         }
     }
 
+    /**
+     * Collects array size to be generated from user.
+     */
     public static void getArraySizeToGenerate() {
 
         while (arraySizeToGenerate == 0) {
