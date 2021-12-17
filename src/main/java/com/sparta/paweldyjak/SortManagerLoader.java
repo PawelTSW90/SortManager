@@ -25,7 +25,7 @@ public class SortManagerLoader {
     public static void getUserInput() {
         //config Logger
         Logger.configLogger();
-        Logger.log(Level.FINE, "Sort Manager application started");
+        Logger.log(Level.INFO, "Sort Manager application started");
 
         //call Output Printer to print start message and set scanner
         OutputPrinter.printMessage(OutputPrinter.generateStartMessage());

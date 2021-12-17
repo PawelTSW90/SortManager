@@ -1,0 +1,140 @@
+17.12.2021, 21:26 FINE Logger configuration finished
+17.12.2021, 21:26 FINE Sort Manager application started
+17.12.2021, 21:26 FINE Start Message printed
+17.12.2021, 21:26 FINE Sorters list printed out from file
+17.12.2021, 21:26 FINE Sorter found in sortersList.txt
+17.12.2021, 21:26 FINE Random array generated
+17.12.2021, 21:26 FINE Merge Sorter object created
+17.12.2021, 21:26 FINE Merge sorter sorting started
+17.12.2021, 21:26 FINE Merge sorter sorting finished
+17.12.2021, 21:26 FINE Final message printed
+Closing application
+
+17.12.2021, 13:48 FINE Logger configuration finished
+17.12.2021, 13:48 FINE Sort Manager application started
+17.12.2021, 13:48 FINE Start Message printed
+17.12.2021, 13:48 FINE Sorters list printed out from file
+17.12.2021, 13:48 SEVERE Invalid user input
+17.12.2021, 13:49 FINE Logger configuration finished
+17.12.2021, 13:49 FINE Sort Manager application started
+17.12.2021, 13:49 FINE Start Message printed
+17.12.2021, 13:49 FINE Sorters list printed out from file
+17.12.2021, 13:49 WARNING Sorter not found in sortersList.txt
+17.12.2021, 13:50 FINE Logger configuration finished
+17.12.2021, 13:50 FINE Sort Manager application started
+17.12.2021, 13:50 FINE Start Message printed
+17.12.2021, 13:50 FINE Sorters list printed out from file
+17.12.2021, 13:50 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:21 FINE Logger configuration finished
+17.12.2021, 14:21 FINE Sort Manager application started
+17.12.2021, 14:21 FINE Start Message printed
+17.12.2021, 14:21 FINE Sorters list printed out from file
+17.12.2021, 14:21 FINE Sorter found in sortersList.txt
+17.12.2021, 14:22 WARNING 0 input for array size. Waiting for new input
+17.12.2021, 14:22 WARNING 0 input for array size. Waiting for new input
+17.12.2021, 14:22 FINE Random array generated
+17.12.2021, 14:22 FINE Bubble Sorter object created
+17.12.2021, 14:22 FINE Bubble sorter sorting started
+17.12.2021, 14:22 FINE Bubble sorter sorting finished
+17.12.2021, 14:22 FINE Final message printed
+Closing application
+17.12.2021, 14:22 FINE Logger configuration finished
+17.12.2021, 14:22 FINE Sort Manager application started
+17.12.2021, 14:22 FINE Start Message printed
+17.12.2021, 14:22 FINE Sorters list printed out from file
+17.12.2021, 14:22 FINE Sorter found in sortersList.txt
+17.12.2021, 14:22 WARNING 0 input for array size. Waiting for new input
+17.12.2021, 14:22 WARNING Invalid user input.
+17.12.2021, 14:22 WARNING 0 input for array size. Waiting for new input
+17.12.2021, 14:22 WARNING Invalid user input.
+17.12.2021, 14:22 FINE Random array generated
+17.12.2021, 14:22 FINE Bubble Sorter object created
+17.12.2021, 14:22 FINE Bubble sorter sorting started
+17.12.2021, 14:22 FINE Bubble sorter sorting finished
+17.12.2021, 14:22 FINE Final message printed
+Closing application
+17.12.2021, 14:23 FINE Logger configuration finished
+17.12.2021, 14:23 FINE Sort Manager application started
+17.12.2021, 14:23 FINE Start Message printed
+17.12.2021, 14:23 FINE Sorters list printed out from file
+17.12.2021, 14:23 FINE Sorter found in sortersList.txt
+17.12.2021, 14:23 WARNING Invalid user input.
+17.12.2021, 14:23 FINE Random array generated
+17.12.2021, 14:23 FINE Bubble Sorter object created
+17.12.2021, 14:23 FINE Bubble sorter sorting started
+17.12.2021, 14:23 FINE Bubble sorter sorting finished
+17.12.2021, 14:23 FINE Final message printed
+Closing application
+17.12.2021, 14:23 FINE Logger configuration finished
+17.12.2021, 14:23 FINE Sort Manager application started
+17.12.2021, 14:23 FINE Start Message printed
+17.12.2021, 14:23 FINE Sorters list printed out from file
+17.12.2021, 14:23 FINE Sorter found in sortersList.txt
+17.12.2021, 14:23 FINE Random array generated
+17.12.2021, 14:23 FINE Bubble Sorter object created
+17.12.2021, 14:23 FINE Bubble sorter sorting started
+17.12.2021, 14:23 FINE Bubble sorter sorting finished
+17.12.2021, 14:23 FINE Final message printed
+Closing application
+17.12.2021, 14:24 FINE Logger configuration finished
+17.12.2021, 14:24 FINE Sort Manager application started
+17.12.2021, 14:24 FINE Start Message printed
+17.12.2021, 14:24 FINE Sorters list printed out from file
+17.12.2021, 14:24 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:24 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:24 FINE Logger configuration finished
+17.12.2021, 14:24 FINE Sort Manager application started
+17.12.2021, 14:24 FINE Start Message printed
+17.12.2021, 14:24 FINE Sorters list printed out from file
+17.12.2021, 14:25 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:25 FINE Logger configuration finished
+17.12.2021, 14:25 FINE Sort Manager application started
+17.12.2021, 14:25 FINE Start Message printed
+17.12.2021, 14:25 FINE Sorters list printed out from file
+17.12.2021, 14:25 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:26 FINE Logger configuration finished
+17.12.2021, 14:26 FINE Sort Manager application started
+17.12.2021, 14:26 FINE Start Message printed
+17.12.2021, 14:26 FINE Sorters list printed out from file
+17.12.2021, 14:26 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:26 FINE Sorter found in sortersList.txt
+17.12.2021, 14:26 FINE Logger configuration finished
+17.12.2021, 14:26 FINE Sort Manager application started
+17.12.2021, 14:26 FINE Start Message printed
+17.12.2021, 14:26 FINE Sorters list printed out from file
+17.12.2021, 14:26 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:26 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:26 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:26 FINE Sorter found in sortersList.txt
+17.12.2021, 14:26 FINE Random array generated
+17.12.2021, 14:26 FINE Bubble Sorter object created
+17.12.2021, 14:26 FINE Bubble sorter sorting started
+17.12.2021, 14:26 FINE Bubble sorter sorting finished
+17.12.2021, 14:26 FINE Final message printed
+Closing application
+17.12.2021, 14:28 FINE Logger configuration finished
+17.12.2021, 14:28 FINE Sort Manager application started
+17.12.2021, 14:28 FINE Start Message printed
+17.12.2021, 14:28 FINE Sorters list printed out from file
+17.12.2021, 14:28 WARNING Invalid user input
+17.12.2021, 14:28 WARNING Invalid user input
+17.12.2021, 14:28 WARNING Sorter not found in sortersList.txt
+17.12.2021, 14:28 FINE Sorter found in sortersList.txt
+17.12.2021, 14:28 FINE Random array generated
+17.12.2021, 14:28 FINE Bubble Sorter object created
+17.12.2021, 14:28 FINE Bubble sorter sorting started
+17.12.2021, 14:28 FINE Bubble sorter sorting finished
+17.12.2021, 14:28 FINE Final message printed
+Closing application
+17.12.2021, 14:28 FINE Logger configuration finished
+17.12.2021, 14:28 FINE Sort Manager application started
+17.12.2021, 14:28 FINE Start Message printed
+17.12.2021, 14:28 FINE Sorters list printed out from file
+17.12.2021, 14:28 WARNING Invalid user input
+17.12.2021, 14:28 FINE Sorter found in sortersList.txt
+17.12.2021, 14:29 FINE Random array generated
+17.12.2021, 14:29 FINE Merge Sorter object created
+17.12.2021, 14:29 FINE Merge sorter sorting started
+17.12.2021, 14:29 FINE Merge sorter sorting finished
+17.12.2021, 14:29 FINE Final message printed
+Closing application

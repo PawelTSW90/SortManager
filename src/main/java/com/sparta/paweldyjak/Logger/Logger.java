@@ -28,7 +28,7 @@ public class Logger {
             Handler fileHandler = new FileHandler("src/main/java/com/sparta/paweldyjak/sortManagerLog.log", true);
             logger.addHandler(fileHandler);
             fileHandler.setFormatter(new LoggerFormatter());
-            Logger.log(Level.FINE, "Logger configuration finished");
+            Logger.log(Level.CONFIG, "Logger configuration finished");
         } catch (IOException e) {
             e.printStackTrace();
         }

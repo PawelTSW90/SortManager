@@ -15,19 +15,19 @@ public class SortersFactory {
      */
     public static Sorters getSorter(int numberOfSorter) {
         if (numberOfSorter == 1) {
-            Logger.log(Level.FINE, "Bubble Sorter object created");
+            Logger.log(Level.INFO, "Bubble Sorter object created");
             return new BubbleSorter();
         } else if (numberOfSorter == 2) {
-            Logger.log(Level.FINE, "Merge Sorter object created");
+            Logger.log(Level.INFO, "Merge Sorter object created");
             return new MergeSorter();
         } else if (numberOfSorter == 3) {
-            Logger.log(Level.FINE, "Binary Tree object created");
+            Logger.log(Level.INFO, "Binary Tree object created");
             return new BinaryTreeSorter();
         } else if(numberOfSorter == 4) {
-            Logger.log(Level.FINE, "Insertion Sorter object created");
+            Logger.log(Level.INFO, "Insertion Sorter object created");
             return new InsertionSorter();
         } else if(numberOfSorter == 5) {
-            Logger.log(Level.FINE, "Selection Sorter object created");
+            Logger.log(Level.INFO, "Selection Sorter object created");
             return new SelectionSorter();
         }
         return null;
