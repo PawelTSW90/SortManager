@@ -130,6 +130,10 @@ Use number grater than 0 for array generating
 Make sure to not use very large numbers for array size, as it may cause application console problems
 
 
+## Author
 
+Pawel Dyjak
+
+[PDyjak@spartaglobal.com]()
 
 
