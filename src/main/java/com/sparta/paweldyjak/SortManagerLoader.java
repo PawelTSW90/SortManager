@@ -70,9 +70,11 @@ public class SortManagerLoader {
             fileReader.close();
         } catch (IOException e) {
             Logger.log(Level.SEVERE, "sortersList.txt file not found! Closing application.");
+            System.out.println("sortersList.txt file not found! Closing application.");
             System.exit(1);
         }
         Logger.log(Level.WARNING, "Sorter not found in sortersList.txt");
+        System.out.println("Sorter not found in sortersList.txt");
         return false;
     }
 }

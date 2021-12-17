@@ -18,7 +18,7 @@ public class MergeSorter implements Sorters {
             return arrayToSort;
         } else {
             splitArray(arrayToSort);
-            int[] sortedArray = mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
+            int[] sortedArray = startArrayMerging();
             Long endTime = System.nanoTime();
             sortingTime = endTime - startTime;
             Logger.log(Level.FINE, "Merge sorter sorting finished");
@@ -52,13 +52,12 @@ public class MergeSorter implements Sorters {
         }
     }
 
-    public void startArrayMerging(int indexOfArrayToMerge){
+    public int[] startArrayMerging(){
         while (arrayListToSort.size()>1){
-            mergeArray(arrayListToSort.get(0), arrayListToSort.get(1), 0);
         }
-
+return new int[1];
     }
-    public int[] mergeArray(int[] firstArray, int[] secondArray, int startIndexOfArraysToMerge) {
+    public int[] mergeArrays(int[] firstArray, int[] secondArray) {
         int firstArrayLength = firstArray.length;
         int secondArrayLength = secondArray.length;
         int firstArrayIndex = 0, secondArrayIndex = 0, mergeIndex = 0;
@@ -97,21 +96,7 @@ public class MergeSorter implements Sorters {
                 }
             }
         }
-        //add mergedArray to arrayListToSort and remove arrays that has been merged
-        arrayListToSort.set(startIndexOfArraysToMerge, mergedArray);
-        arrayListToSort.remove(startIndexOfArraysToMerge + 1);
-
-        //if whole arrayList has been iterated or there is odd number of remaining arrays,
-        // start iteration from beginning of the arrayList by setting indexOfArraysToMerge to 0
-        if (arrayListToSort.size() > 1) {
-            if (startIndexOfArraysToMerge == arrayListToSort.size() - 2 || startIndexOfArraysToMerge == arrayListToSort.size() - 1) {
-                startIndexOfArraysToMerge = 0;
-            } else {
-                startIndexOfArraysToMerge++;
-            }
-            mergeArray(arrayListToSort.get(startIndexOfArraysToMerge), arrayListToSort.get(startIndexOfArraysToMerge + 1), startIndexOfArraysToMerge);
-        }
-        return arrayListToSort.get(0);
+        return mergedArray;
     }
 
     @Override

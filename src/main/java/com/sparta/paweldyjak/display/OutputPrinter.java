@@ -33,6 +33,7 @@ public class OutputPrinter {
             Logger.log(Level.FINE, "Sorters list printed out from file");
         } catch (IOException e) {
             Logger.log(Level.SEVERE, "sortersList.txt file not found! Closing application.");
+            System.out.println("sortersList.txt file not found! Closing application");
             System.exit(1);
         }
         return fileString.toString();

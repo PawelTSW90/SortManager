@@ -14,7 +14,7 @@ public class Logger {
         try {
             //remove comments from line below to turn on Logger
 
-            /*setLoggerLevel(Level.FINEST);*/
+            setLoggerLevel(Level.OFF);
             Handler fileHandler = new FileHandler("src/main/java/com/sparta/paweldyjak/sortManagerLog.log", true);
             logger.addHandler(fileHandler);
             fileHandler.setFormatter(new LoggerFormatter());
