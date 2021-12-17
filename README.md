@@ -2,7 +2,7 @@
 Sort Manager is an application that allows user to sort randomly generated array of numbers, by 
 using different sorting algorithms.
 
-##Description
+## Description
 
 Sort Manager allows user to use 5 sorting algorithms:
 
@@ -21,9 +21,9 @@ When sorting is done, Sort Manager gives user information about sorting time and
 array numbers order before and after sorting. User may add his own sorting algorithms to Sort 
 Manager.
 
-##Getting started
+## Getting started
 
-###Using Sort Manager
+### Using Sort Manager
 
 1. Type a number of sorter you would like to use. Make sure that number you will use is
    visible on the list. Otherwise, "**Sorter doesn't exist**" error will appear. You should only use 
@@ -34,9 +34,9 @@ Manager.
    must be greater than 0**" error. Try to avoid using large numbers, as they may cause 
    application console problems.
 
-###Adding sorting algorithms
+### Adding sorting algorithms
 
-####1. Add sorter name to **sortersList.txt** file. Pay attention to whitespaces and numeration:
+#### 1. Add sorter name to **sortersList.txt** file. Pay attention to whitespaces and numeration:
 
 EXAMPLE:
 
@@ -49,7 +49,7 @@ EXAMPLE:
 
 
 
-####2. Add new sorter class to application **sorters** package. Make sure the class name is the same as sorter name in sortersList.txt and without whitespaces and numeration. 
+#### 2. Add new sorter class to application **sorters** package. Make sure the class name is the same as sorter name in sortersList.txt and without whitespaces and numeration. 
    
 
 EXAMPLE:
@@ -58,7 +58,7 @@ sortersList.txt -----> 6. Quick Sort Sorter
 
 class name -----> QuickSortSorter
 
-####3. Implement Sorters interface in your sorter class. Sorters interface has 3 methods:
+#### 3. Implement Sorters interface in your sorter class. Sorters interface has 3 methods:
 
 int[] sort(int[] arrayToSort) -----> calls sorter algorithm and returns sorted array
 
@@ -67,7 +67,7 @@ Long getSortingTime() -----> method returns sorting time
 String getSorterName() -----> returns name of the sorter to display in final message
 
 
-####4. Add sorter to SortersFactory class
+#### 4. Add sorter to SortersFactory class
 
 EXAMPLE:
 
@@ -105,9 +105,9 @@ return new QuickSortSorter();}** <-----
 Make sure that numberOfSorter condition should be the same as sorter number in **sortersList.txt**
 
 
-###Troubleshooting
+### Troubleshooting
 
-####1. I'm getting error:
+#### 1. I'm getting error:
 
 * "sortersList.txt file not found! Closing application"
 
@@ -125,7 +125,7 @@ Make sure you followed steps of [Adding sorting algorithms](#adding-sorting-algo
 
 Use number grater than 0 for array generating
 
-####2. Sort Manager is not showing final message
+#### 2. Sort Manager is not showing final message
 
 Make sure to not use very large numbers for array size, as it may cause application console problems
 
