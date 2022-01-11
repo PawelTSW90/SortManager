@@ -241,3 +241,14 @@ Closing application
 11.01.2022, 15:10 FINE Merge sorter sorting finished
 11.01.2022, 15:10 FINE Final message printed
 Closing application
+11.01.2022, 15:11 CONFIG Logger configuration finished
+11.01.2022, 15:11 INFO Sort Manager application started
+11.01.2022, 15:11 FINE Start Message printed
+11.01.2022, 15:11 INFO Sorters list printed out from file
+11.01.2022, 15:11 FINE Sorter found in sortersList.txt
+11.01.2022, 15:11 FINE Random array generated
+11.01.2022, 15:11 INFO Bubble Sorter object created
+11.01.2022, 15:11 FINE Bubble sorter sorting started
+11.01.2022, 15:11 FINE Bubble sorter sorting finished
+11.01.2022, 15:11 FINE Final message printed
+Closing application

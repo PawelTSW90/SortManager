@@ -4,6 +4,8 @@ import com.sparta.paweldyjak.input_output.OutputPrinter;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -33,7 +35,7 @@ public class SortersPerformanceTest {
     void bubbleSorterTest() {
         Sorters sorter = new BubbleSorter();
         long startTime = System.nanoTime();
-        int[] sortedValue = sorter.sort(unsortedArray);
+        int[] sortedValue = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         long endTime = System.nanoTime();
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage("Bubble Sorter", unsortedArray, sortedValue, endTime - startTime));
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -48,7 +50,7 @@ public class SortersPerformanceTest {
     void mergeSorterTest() {
         Sorters sorter = new MergeSorter();
         long startTime = System.nanoTime();
-        int[] sortedValue = sorter.sort(unsortedArray);
+        int[] sortedValue = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         long endTime = System.nanoTime();
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage("Merge Sorter", unsortedArray, sortedValue, endTime - startTime));
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -63,7 +65,7 @@ public class SortersPerformanceTest {
     void binaryTreeSorterTest() {
         Sorters sorter = new BinaryTreeSorter();
         long startTime = System.nanoTime();
-        int[] sortedValue = sorter.sort(unsortedArray);
+        int[] sortedValue = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         long endTime = System.nanoTime();
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage("Binary Tree Sorter", unsortedArray, sortedValue, endTime - startTime));
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -77,7 +79,7 @@ public class SortersPerformanceTest {
     void InsertionSorterTest() {
         Sorters sorter = new InsertionSorter();
         long startTime = System.nanoTime();
-        int[] sortedValue = sorter.sort(unsortedArray);
+        int[] sortedValue = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         long endTime = System.nanoTime();
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage("Insertion Sorter", unsortedArray, sortedValue, endTime - startTime));
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -92,7 +94,7 @@ public class SortersPerformanceTest {
     void selectionSorterTest() {
         Sorters sorter = new InsertionSorter();
         long startTime = System.nanoTime();
-        int[] sortedValue = sorter.sort(unsortedArray);
+        int[] sortedValue = sorter.sort(Arrays.copyOf(unsortedArray, unsortedArray.length));
         long endTime = System.nanoTime();
         OutputPrinter.printMessage(OutputPrinter.generateFinalMessage("Selection Sorter", unsortedArray, sortedValue, endTime - startTime));
         System.out.println("\n" + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
