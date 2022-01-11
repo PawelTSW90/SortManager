@@ -41,6 +41,7 @@ public class BubbleSorter implements Sorters {
      * Returns Long with Bubble Sorter sorting time.
      * @return Long with Bubble Sorter sorting time.
      */
+    @Override
     public Long getSortingTime() {
         return sortingTime;
     }

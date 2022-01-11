@@ -1,7 +1,9 @@
-package com.sparta.paweldyjak.display;
+package com.sparta.paweldyjak.input_output;
 
 import com.sparta.paweldyjak.Logger.Logger;
 import com.sparta.paweldyjak.SortManagerLoader;
+import com.sparta.paweldyjak.Utility;
+
 import java.util.Scanner;
 import java.util.logging.Level;
 
@@ -28,7 +30,7 @@ public class UserInputScanner {
                 } else {
                     //check if sorter chosen by user exists
                     sorterNumberToUse = userInputScanner.nextInt();
-                    if (!SortManagerLoader.checkIfSorterClassExists(sorterNumberToUse)) {
+                    if (!Utility.checkIfSorterClassExists(sorterNumberToUse)) {
                         Logger.log(Level.WARNING, "Sorter not found in sortersList.txt");
                         System.out.println("Sorter not found in sortersList.txt \nPlease try again");
                         sorterNumberToUse = 0;

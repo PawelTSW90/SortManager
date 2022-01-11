@@ -1,4 +1,4 @@
-package com.sparta.paweldyjak.display;
+package com.sparta.paweldyjak.input_output;
 
 import com.sparta.paweldyjak.Logger.Logger;
 import java.io.*;
@@ -33,7 +33,7 @@ public class OutputPrinter {
         StringBuilder fileString = new StringBuilder();
         String currentLine;
         try {
-            BufferedReader fileReader = new BufferedReader(new FileReader("src/main/java/com/sparta/paweldyjak/sorters/sortersList.txt"));
+            BufferedReader fileReader = new BufferedReader(new FileReader("src/main/resources/sortersList.txt"));
             currentLine = fileReader.readLine();
             while (currentLine != null) {
                 fileString.append(currentLine);

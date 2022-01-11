@@ -9,7 +9,7 @@ public class App {
      * @param args Main method String argument.
      */
     public static void main(String[] args) {
-        SortManagerLoader.getUserInput();
+        SortManagerLoader.start();
 
     }
 }

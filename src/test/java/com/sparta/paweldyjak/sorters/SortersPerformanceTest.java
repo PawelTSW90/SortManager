@@ -1,6 +1,6 @@
 package com.sparta.paweldyjak.sorters;
 
-import com.sparta.paweldyjak.display.OutputPrinter;
+import com.sparta.paweldyjak.input_output.OutputPrinter;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

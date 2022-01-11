@@ -25,7 +25,7 @@ public class Logger {
         try {
             logger.setLevel(Level.ALL);
             logger.setUseParentHandlers(false);
-            Handler fileHandler = new FileHandler("src/main/java/com/sparta/paweldyjak/sortManagerLog.log", true);
+            Handler fileHandler = new FileHandler("src/main/resources/sortManagerLog.log", true);
             logger.addHandler(fileHandler);
             fileHandler.setFormatter(new LoggerFormatter());
             Logger.log(Level.CONFIG, "Logger configuration finished");

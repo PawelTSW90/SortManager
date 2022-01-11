@@ -1,4 +1,4 @@
-package com.sparta.paweldyjak.display;
+package com.sparta.paweldyjak.input_output;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,8 +1,8 @@
 package com.sparta.paweldyjak;
 
 import com.sparta.paweldyjak.Logger.Logger;
-import com.sparta.paweldyjak.display.OutputPrinter;
-import com.sparta.paweldyjak.display.UserInputScanner;
+import com.sparta.paweldyjak.input_output.OutputPrinter;
+import com.sparta.paweldyjak.input_output.UserInputScanner;
 import com.sparta.paweldyjak.sorters.Sorters;
 import com.sparta.paweldyjak.sorters.SortersFactory;
 import java.io.*;
@@ -22,7 +22,7 @@ public class SortManagerLoader {
      * scanner to get user input.
      */
 
-    public static void getUserInput() {
+    public static void start() {
         //config Logger
         Logger.configLogger();
         Logger.log(Level.INFO, "Sort Manager application started");
@@ -74,39 +74,4 @@ public class SortManagerLoader {
         Logger.log(Level.FINE, "Final message printed\nClosing application");
     }
 
-    /**
-     * Checks if sorter chosen by user has its sorter class
-     * @param sorterNumber - Number of sorter number to check
-     * @return - A boolean telling if sorter from sortersList.txt file has it class representation
-     */
-    public static boolean checkIfSorterClassExists(int sorterNumber) {
-        if (sorterNumber < 1) {
-            return false;
-        }
-        int lineNumber = 1;
-        StringBuilder className = new StringBuilder();
-        //retrieve name of the sorter from file
-        try {
-            BufferedReader fileReader = new BufferedReader(new FileReader("src/main/java/com/sparta/paweldyjak/sorters/sortersList.txt"));
-            while (lineNumber != sorterNumber) {
-                fileReader.readLine();
-                lineNumber++;
-            }
-            //refactor name of the sorter to class format and check if that class exists
-            className.append(fileReader.readLine());
-            String classNameString = className.substring(3, className.length());
-            classNameString = classNameString.replace(" ", "");
-            File testFile = new File("src/main/java/com/sparta/paweldyjak/sorters/" + classNameString + ".java");
-            if (testFile.exists()) {
-                Logger.log(Level.FINE, "Sorter found in sortersList.txt");
-                return true;
-            }
-            fileReader.close();
-        } catch (IOException e) {
-            Logger.log(Level.SEVERE, "sortersList.txt file not found! Closing application.");
-            System.out.println("sortersList.txt file not found! Closing application.");
-            System.exit(1);
-        }
-        return false;
-    }
 }
